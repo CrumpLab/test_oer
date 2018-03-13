@@ -1,0 +1,575 @@
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={afdfdafdafsd},
+            pdfauthor={Matthew Crump},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{afdfdafdafsd}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Matthew Crump}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{2018-03-13}
+
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter*{Preface}\label{preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+This is a tutorial and set of working examples for creating web-based
+textbooks using a collection of open-source tools.
+
+This web-book is itself a working example. All of the source code needed
+to compile this book yourself is included in the
+\href{https://github.com/CrumpLab/OER_bookdown}{github repository for
+this book}. So, you could download the repository, and by following the
+instructions laid out across the chapters, replace this text with your
+own, and then compile your book as a web-page, .pdf or epub.
+
+\chapter{asdfasdf}\label{asdfasdf}
+
+aldsjfhadlkjfhadsf adf asdf asd fads f adsf ads fads
+
+\section{akfhskfjghskjfdhgfdsgsfd}\label{akfhskfjghskjfdhgfdsgsfd}
+
+a dfa dsf as df asdf
+
+\chapter{chapter 2}\label{chapter-2}
+
+asdf as df asdf ad sf
+
+\chapter{adfdsfads}\label{adfdsfads}
+
+a
+
+asdf ads fads f adsf ads fads f s
+
+\chapter{Github}\label{github}
+
+To quote from wikipedia, ``Github is a Web-based Git version control
+repository hosting service. It is mostly used for computer code.''---
+and I would add, many other things.
+
+The purpose of this chapter is to describe how Github can be used to
+serve your web-book (compiled using bookdown), and to share the source
+code so that others can duplicate and modify your book, or so that
+others can contribute content to your existing book.
+
+\section{Getting Started}\label{getting-started}
+
+\subsection{Make an account with
+Github}\label{make-an-account-with-github}
+
+To get started with \href{https://github.com}{Github} you need to create
+a free account. You should see a sign up option on the main page.
+
+Your account now consists of your profile page (where you can add
+information about yourself), and an empty list of repositories.
+Repositories are Github file folders. They can be purely cloud-based;
+for example, you can create a repository then add files to it through
+the web-based interface. You can also create a copy of each repository
+on your local computer, make changes to the repository on your local
+computer, and then merge those changes with the online repository.
+
+\subsection{Install Github Desktop}\label{install-github-desktop}
+
+Github has provided a free and convenient tool for using your local
+computer to interface with the web-based version of Github. To use the
+tool, download and install the \href{https://desktop.github.com}{desktop
+app for Github}. Once the app is installed, make sure that you
+\href{https://help.github.com/desktop/guides/getting-started-with-github-desktop/authenticating-to-github/}{connect
+it to your Github account} so that you can access repositories that you
+create.
+
+\section{Repository workflow}\label{repository-workflow}
+
+We will use the following workflow:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a new empty repository on the Github Website
+\item
+  Clone the repository to your local computer
+\item
+  Add files to the repo on your local computer (work locally)
+\item
+  Merge the files back to the Github Website (share final versions)
+\end{enumerate}
+
+\section{Creating a new repository on
+Github.com}\label{creating-a-new-repository-on-github.com}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Log in to Github.com
+\item
+  In the top right corner of the page, click the ``+'' icon
+\item
+  Choose new repository
+\item
+  Give it a short name
+\item
+  You have a few other options that you can revisit later
+\item
+  Click create repository
+\end{enumerate}
+
+\section{Cloning a copy on your
+computer}\label{cloning-a-copy-on-your-computer}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Open the Github desktop app
+\item
+  Login in to your Github account
+\item
+  Choose the clone repository option
+\item
+  Find the name of the repository you created on Github and select it.
+  Github Desktop will now download the contents of the repository and
+  save it locally (in the file folder of your choice) on your computer
+\end{enumerate}
+
+\section{Make changes to the
+repository}\label{make-changes-to-the-repository}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If you are on a mac, choose ``show in finder''.
+\item
+  You can now edit any of the files locally
+\end{enumerate}
+
+\section{Update the online github
+repository}\label{update-the-online-github-repository}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Any time you change a file, git will track all of the changes that you
+  make
+\item
+  To submit changes, choose the commit button
+\item
+  All of your changes will now be uploaded to the online repository.
+\end{enumerate}
+
+\chapter{Hypothes.is}\label{hypothes.is}
+
+\href{https://web.hypothes.is}{Hypothes.is} is a web-browser add-on for
+annotating the web via inline commenting. This allows anyone to select a
+snippet of text in a web-browser and then post a comment about the
+selected text. Annotations can be made publicly or privately. All public
+annotations can be viewed by anyone else running hypothesis on the same
+website. Using Hypothesis with your web-book allows you to engage
+students in interacting with the textbook by allowing them to contribute
+to content generation (by posting new content), or content revision (by
+tagging sections in need of revision).
+
+If you publish your bookdown book as a webpage, then you anyone with
+Hypothes.is can use it to annotate the textbook.
+
+\section{A case study example}\label{a-case-study-example}
+
+I recently compiled a
+\href{http://crumplab.github.io/ResearchMethods/}{Research Methods in
+Psychology textbook} using the tools described in this tutorial. The
+landing page describes how Hypothes.is can be used in conjunction with
+the textbook.
+
+In class I assigned students the task of downloading Hypothes.is,
+creating a Hypothes.is account, and then throughout the course gave them
+various assignments where they were responsible for annotating parts of
+the textbook.
+
+For example, in one assignment I had students annotate sections of the
+textbook that were in need of improvement. This allows students to
+participate in content revision as they read the textbook. Other
+assignments could include focused online discussion about textbook
+content using annotations, or using annotations as a way for students to
+add content to the textbook.
+
+\section{hypothesisr}\label{hypothesisr}
+
+\href{https://github.com/mdlincoln/hypothesisr}{hypothesisr} is an r
+package for scraping annotation data collected through the hypothesis
+app. All public annotations submitted through hypothesis to any website
+are publically available for download. As a result, the hypothesisr
+package can be used to download and process the annotations submitted to
+your website.
+
+\section{Hypothesis Explorer}\label{hypothesis-explorer}
+
+As a part of this project, we have created a Shiny app that conveniently
+displays and manipulates hypothesis annotation databases in a website.
+The Shiny app is located in this github repository,
+\url{https://github.com/CrumpLab/hypothesis_explorer}
+
+\subsection{Running the spp}\label{running-the-spp}
+
+To run this app you need to have R and R-Studio installed on your
+computer. You will also need to have downloaded the Shiny and
+hypothesisr packages. You can run the app by either of the following
+methods
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  You can download the hypothesis\_explorer repository as a .zip file,
+  then open the server.r, or ui.r files in R-studio and click run-app
+\item
+  You can have R-studio automatically download and the run app using by
+  entering the following in the command line
+\end{enumerate}
+
+\texttt{shiny::runGitHub(\textquotesingle{}hypothesis\_explorer\textquotesingle{},\ \textquotesingle{}CrumpLab\textquotesingle{})}
+
+\section{Downloading annotations}\label{downloading-annotations}
+
+The Hypothesis Explorer app currently implements two main functions:
+\textbf{downloading} and \textbf{displaying/searching} parts of the
+publicly avialable Hypothes.is annotation database.
+
+\textbf{Download the annotation database associated with a website}:
+Type in the name of the website in the search bar. To see an example,
+enter ``crumplab'' into the website search and click the download
+button.
+
+\textbf{NOTE OF CAUTION} We use the hypothesisr package to scrape parts
+of the entire Hypothes.is annotation database. As a result, there are
+some nuances in searching for particular websites that may cause you to
+accidentally download all of the annotations to a global domain rather
+than to a particular website.
+
+For example, I have two web-books published on my github domain, these
+are:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \url{https://www.crumplab.github.io/ResearchMethods}
+\item
+  \url{https://www.crumplab.github.io/programmingforpsych}
+\end{enumerate}
+
+I am interested in using the Shiny app to look at only the annotations
+associated with these two websites. Using ``crumplab'' as the website
+will download all of the annotations associated with all subdomains on
+the site, so it will download annotations for both textbooks. On the
+other hand, including global domain information by searching
+``crumplab.github.io'' will cause an attempt to download all annotations
+associated with the entire github domain, which will cause the Shiny app
+to crash.
+
+\section{Viewing the annotations Search and subset the
+database}\label{viewing-the-annotations-search-and-subset-the-database}
+
+Hypothesis explorer should automatically download any annotations
+associated with the website that you entered. At the moment, we have
+only tested this for websites built with github pages.
+
+After the annotation database has been downloaded the two viewable tabs
+``Summary'', and ``Data'' will be autopopulated. The Summary tab gives
+an overview of the top annotated documents, pages, tags and users. The
+Data tab presents the entire database.
+
+\subsection{Viewing all the variables in the
+database}\label{viewing-all-the-variables-in-the-database}
+
+The left-hand panel includes a ``Variables (in Data View)'' text box.
+Click into the box to see all of the names of each variable (column
+names) in the database. Clicking one of the variable names will add it
+to the list, and automatically display the content of that column in the
+database viewer. Likewise, deleting variable names will hide those
+columns from being displayed.
+
+\subsection{Subsetting the data}\label{subsetting-the-data}
+
+For quickly collapsing aspects of the data by row information, we have
+four subsetting operations, for displaying only annotations associated
+with particular documents (e.g., entire books), pages (chapters within a
+book), tags (associated with each annotation), and users.
+
+\subsection{Voting feature}\label{voting-feature}
+
+When a user submits an annotation, other users can post comments
+underneath the annotation. For example, if a student highlights a
+section of the textbook and comments that this section should be
+improved, another student could reply to the original comment. We have
+implemented a rudimentary comment voting system using these features of
+hypothes.is. For example, up/down style voting can be implemented by
+instructing users to vote by using the reply feature. Specifically, up
+votes can be registered by replying with a numeric value of 1, and down
+votes can be registered by replying with a numeric value of -1.
+
+Hypothesis Explorer automatically looks for any child posts that contain
+1s or -1s, counts the total vote for each parent comment, and then
+displays the count in a column variable called ``votes''.
+
+\chapter{Zotero}\label{zotero}
+
+\href{https://www.zotero.org}{Zotero} is a free, cross-platform tool to
+help you collect, organize, cite, and share your research sources.
+Zotero is similar to Mendeley or EndNote.
+
+The purpose of this chapter is to show how Zotero can be used as a
+reference manager to allow you to cite works in your book, and
+automatically compile bibliographies or reference sections. The bookdown
+package uses Latex bibliography files to generate citations and create
+bibliographies. These .bib files are text-based files with a specific
+syntax for coding the relevant information in a citation. Each citation
+in a .bib file has an associated key that is inserted into an Rmarkdown
+document to generate a citation. We will use Zotero to avoid writing our
+own .bib from scratch. Instead, there are convenient methods for
+populating Zotero with a database of references, and for compiling a
+.bib file from a Zotero databse that can be used in bookdown.
+
+\section{Getting Started}\label{getting-started-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create an account with \href{https://www.zotero.org}{Zotero}, click
+  register in the top-right corner
+\item
+  \href{https://www.zotero.org/download/}{Download} the Zotero Desktop
+  app
+\item
+  \href{https://www.zotero.org/download/}{Download} the Zotero Connector
+  extension for your web-browser
+\end{enumerate}
+
+Zotero operates on the cloud as well as on your desktop. You can connect
+your online Zotero account with your desktop app in the preferences.
+
+\section{Populating Zotero with
+references}\label{populating-zotero-with-references}
+
+There are multiple ways to import references into Zotero. In the Zotero
+desktop app you can create folders to organize your references.
+
+\subsection{Drag and Drop .pdfs}\label{drag-and-drop-.pdfs}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a new folder and name it
+\item
+  Drag and drop .pdfs into the folder
+\item
+  Highlight the .pdfs, then right-click, and choose ``retrieve metadata
+  for pdf''.
+\item
+  For most journal articles, Zotero will be able to automatically find
+  the citation information for your .pdf. This will convert the .pdf
+  into a Zotero citation that includes both the citation information, as
+  well as the .pdf
+\end{enumerate}
+
+\subsection{Import citations and pdfs from the
+web}\label{import-citations-and-pdfs-from-the-web}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Ensure that your Desktop app is open, and that you have installed the
+  Zotero plugin for your web-browser
+\item
+  Use google scholar to search for an article
+\item
+  Click the Zotero button in your web-browser
+\item
+  You should see a list of all of the articles on the google scholar
+  page.
+\item
+  Click any or all the articles you want to import, then import them
+\item
+  Zotero will download the citation information along with any
+  associated .pdf to the current folder that is open in the Zotero
+  desktop app.
+\end{enumerate}
+
+Zotero is fairly flexible, so the above process will generally work when
+you are accessing many different databases, and journal web-pages for
+specific articles.
+
+\subsection{A note of caution}\label{a-note-of-caution}
+
+The citation information that Zotero downloads is sometimes inaccurate.
+Be sure to check the fields for each of your citations to ensure they
+are accurate. For example, page ranges are often missing.
+
+\section{Generating a .bib file}\label{generating-a-.bib-file}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Right-click a Zotero folder
+\item
+  Choose ``Export Collection''
+\item
+  Choose ``Bibtex''
+\item
+  Save the file
+\item
+  Copy the file into the folder for your bookdown project
+\item
+  add the file to the bibliography line in the Index.Rmd file.
+\end{enumerate}
+
+\section{Citing references in an RMarkdown
+file}\label{citing-references-in-an-rmarkdown-file}
+
+Citations are add using the following format \texttt{@citationkey}, or
+\texttt{{[}@citationkey{]}} to place the author,year citation in
+parentheses. The citation key name is listed for each citation in the
+bib file. Here are a couple of links with some additional examples:
+\href{https://bookdown.org/yihui/bookdown/citations.html}{examples from
+bookdown}, and examples from
+\href{http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html}{RMarkdown}.
+
+The source code for this book contains two .bib files: book.bib and
+packages.bib. Each citation in those files has an associated citation
+key. Here is an example of citing the bookdown package \citep{xie2015}.
+This is an example of citing R-core team \citep{R-base}
+
+\subsection{Cite while you write}\label{cite-while-you-write}
+
+A minor inconvenience when using .bib for citations in Rmarkdown is that
+you have to know the citation key, and these are easy to forget. One
+option is to load up your .bib file, then search through it to find the
+citation key.
+
+Another option is to download and install the \texttt{citr} package.
+Once this package is installed, you can use its cite while your write
+feature. Click the tools menu, addins, then, insert citations. This will
+open up a window showing all of the citations in your bib files. You can
+click multiple citations, and then insert the citation keys into your
+Rmarkdown document. This is convenient method for quickly finding needed
+citation keys. I recommend first openining the index.rmd file (which
+points to your .bib files), and then opening the insert citations tools;
+this will allow the tool to find your .bib files. After this point, you
+should be able to use the tool when you are working within .Rmd files
+for each chapter.
+
+\bibliography{book.bib,packages.bib}
+
+
+\end{document}
